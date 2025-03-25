@@ -1,14 +1,12 @@
-
+// Fetch ou Axios
 import axios from "axios";
 
-//const {NODE_ENV} = process.env;
-//const URL = "http://localhost:3001/api";
-const URL = "https://projeto-spotify-qqg8.onrender.com/api"
+const URL = "http://localhost:3001";
 
-const resArtists = await axios.get(`${URL}/artists`);
-const resSongs = await axios.get(`${URL}/songs`);
+const responseArtists = await axios.get(`${URL}/artists`);
+const responseSongs = await axios.get(`${URL}/songs`);
 
-export const artistArray = resArtists.data;
-export const songsArray = resSongs.data;
+export const artistArray = responseArtists.data;
+export const songsArray = responseSongs.data;
 
-console.log(resArtists);
+// console.log(responseArtists.data);
